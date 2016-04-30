@@ -1,0 +1,21 @@
+<h1>errors</h1>
+<table border="2">
+	<tr>
+	<% @errors.attribute_names.each do |key,value| %>
+		<th>
+			<%= key %>
+		</th>
+	<% end %>
+	</tr>
+	<% @errors.each do |error| %>
+	<tr>
+	<% error.attributes.each do |key,value| %>
+		<td>
+
+			<%= value  %>
+
+		</td>
+			<% end %>
+	</tr>
+		<% end %>
+</table>
